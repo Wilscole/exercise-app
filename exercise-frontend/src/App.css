@@ -1,0 +1,328 @@
+/*  ===== MOBILE styles (inherited by all devices) ===== 
+/*  ===== See tablet, desktop, and print @media queries at the bottom.
+
+
+//for importing a font
+/*   ----- Imports  -----  */  
+@font-face {                
+  font-family: 'Sara', sans-serif;
+} 
+                            /* ...or hosted services like Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');
+
+/* @import '../node_modules/modern-normalize/modern-normalize.css'; */
+                            /* npm install modern-normalize 
+                              Resets elements for browser consistancy.  
+                              http://nicolasgallagher.com/about-normalize-css/ 
+                            */
+
+/* //@import "component1.css";    */
+
+
+/*   ----- Variables Optional  -----  */
+:root {
+  --customTeal: rgb(77, 202, 202);
+  --itemBlue: rgb(144, 163, 174);
+  --cream: rgb(255,253,208)
+  /* --custom-size:; */
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+/* //REQUIRED */
+body {                     /* Can alternatively define in html {} or :root {} */
+  color: var(--customTeal);
+  background-color: #525f75;
+  font-family: 'Sara';
+  font-size: 12pt;
+  max-width: 90%;
+  margin:0% 10% 0% 10%;
+  padding:0px 0px 300px 0px; 
+  border: 0pt solid rgb(255, 219, 88)        /*border was handled primarily in the main element */
+}
+
+/* ----- Anchors (NOT IN THIS ASSIGNMENT ----- Text links */
+/* a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {} */
+
+/*  ----- Navigation (REQUIRED) ----- Override text links for navigation only.  */
+nav {
+  background-color: var(--itemBlue);
+  border: 5pt solid var(--cream); 
+  font-size: 18pt; 
+  font-weight: bold;
+  line-height: 500% ;
+  margin: 10% 0% 0% 0% ;
+  padding: 0px ;
+  text-decoration: underline;
+  text-align: center;
+
+}
+nav a {
+  color:rgb(255, 219, 88);
+  margin-right:25px;
+  padding:5px;
+  text-align:center;
+}
+nav a:hover {
+  background-color: gray;
+  color: var(--customTeal)
+}
+
+/*  ----- Page layout blocks -----  */
+header , footer {                   /*required */
+background-color: var(--itemBlue);
+color: rgb(189, 237, 255);
+border-right: 5pt solid var(--cream);
+border-left: 5pt solid var(--cream); 
+border-bottom: 5pt solid var(--cream); 
+font-family: 'Sara';
+font-size: 22pt;
+font-weight: bolder;
+margin:0px;               /* I liked the look of the sections being seperated by just the border so I left this as 0 */
+padding:2%  ;
+text-align: center;
+}
+
+main {
+background-color: var(--itemBlue);
+color: var(--cream);
+border-right: 5pt solid var(--cream);
+border-left: 5pt solid var(--cream); 
+border-bottom: 5pt solid var(--cream); 
+font-size: 16pt;
+font-weight: lighter;
+line-height: 200%;
+margin:0px;
+padding: 10px;
+text-align:center
+}
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+
+/*  -----  Typography  ----- */
+p {
+  margin: 0% 15% 0% 15%;
+  font-size: 14pt;
+}
+footer p{
+  margin-top:0px;
+  margin:2%
+}
+header p{
+  margin-top: -2%
+}
+
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {} */
+
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+span {
+  margin:5%;
+}
+/* abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+strong {}
+sub {}
+sup {}
+time {} */
+
+/*  ----- Coding or instructional typography ----- */
+/* pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {} */
+
+/*  ----- Table ----- */
+table {
+  border-collapse: collapse;
+  border:2pt solid #023f05;
+  width: 70%;
+  margin:0% 0% 5% 15%;
+  padding: 0%
+}
+caption {
+  text-align: center;
+  font-size: 24pt;
+  font-weight: bolder;
+  margin:3%
+}
+thead {
+font-weight: bolder;
+font-size:18pt
+}
+
+
+tbody {}
+tfoot {}
+tr {
+  border-bottom: 1pt solid #023f05;
+  padding:1%
+}
+  tr:nth-child(even) {
+    background-color: rgb(130, 130, 120);
+
+  }
+th {
+  border-bottom: 2pt solid #023f05;
+  background-color: rgb(65, 65, 60);
+  padding:0%;
+  margin:3%
+
+}
+th:nth-child(1) {
+  text-align: left;
+  padding-left:2%
+}
+th:nth-child(2) {
+  text-align: left;  
+}
+th:nth-child(3) {
+  text-align: right;
+  padding-right: 2%    
+  
+}
+td {
+  /* borders/padding are handled below or in tr */
+}
+  td:nth-child(1) {
+    text-align: left;
+    padding-left:2%;
+  }
+  td:nth-child(2) {
+    text-align: left; 
+    
+  }
+  td:nth-child(3) {
+    text-align: right;
+    padding-right: 2%    
+    
+  }
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {}
+fieldset {
+  /* border:; */
+}
+  legend {}
+label {}
+  button {
+    font-family:"Sara";
+    font-size: 12pt;
+    padding: 2%;
+    margin:1%;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    opacity: .6;
+  }
+  input {
+    font-family:"Sara";
+    font-size: 12pt;
+    padding: 2%;
+    margin:1%;
+    text-align:center;
+    background-color: #e7e7e7 ;
+    opacity: .5
+  }
+  ::placeholder{
+    color: black
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  select {
+    font-family:"Sara";
+    font-size: 12pt;
+    padding: 2%;
+    margin:1%;
+    text-align:center;
+    background-color: #e7e7e7 ;
+    opacity: .5
+  }
+
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+/* figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {} */
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+/* .floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {} */
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
